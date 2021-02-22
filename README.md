@@ -33,6 +33,7 @@ All products and services > ENGAGEMENT CLOUD > Notify > Services > +
 * Save
 
 # Run tw-create-bindings.py
+* Copy the csv file containing the list of numbers you want to bind to the notify service (e.g. **my-list-of-numbers.csv**) to this project directory and run:
 ```
 python tw-create-bindings.py -f my-list-of-numbers.csv
 ```
