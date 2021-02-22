@@ -12,7 +12,9 @@ conda env create -n twilio-env -f environment.yml
 ```
 
 # Setup Twilio trial account
-https://www.twilio.com/try-twilio
+* Visit https://www.twilio.com/try-twilio
+* Create a copy of twilio.config.example called twilio.config
+* From the [dashboard](https://www.twilio.com/console) copy your ACCOUNT SID and AUTH TOKEN and enter them in twilio.config
 
 # Buy a number
 All products and services > SUPER NETWORK > Phone Numbers > Buy a number
@@ -20,12 +22,12 @@ All products and services > SUPER NETWORK > Phone Numbers > Buy a number
 
 # Set up a messaging service
 All products and services > COMMUNICATIONS CLOUD > Programmable Messaging > Messaging services > Create Messaging Service
-* Make a note of the messaging service SID; e.g. "MG#################################"
+* Copy the messaging service SID (e.g. "MG#################################") into twilio.config
 
 # Set up a notify service
 All products and services > ENGAGEMENT CLOUD > Notify > Services > +
 * Give it a friendly name and create
-* Make a note of the notify service SID; e.g. "IS###################################"
+* Copy the notify service SID (e.g. "IS###################################") into twilio.config 
 * Click service friendly name
 * Under Messaging Service SID select the messaging service from above
 * Save
