@@ -1,16 +1,15 @@
 # Setup Python with the Twilio client
-In: my.desktop.ucl.ac.uk
-  Open: Anaconda3 (64-bit) > Anaconda Prompt
-  In: Anaconda Prompt
-    Type:
-      conda create -n twilio
-      conda activate twilio
-      conda install pip
-      pip install twilio yaml
-      python # this starts python interpreter with ">>>" prompt
-    In: Python interpreter
-      Type:
-        from twilio.rest import Client
+## Using venv
+```
+python -m venv env
+./env/Scripts/activate
+pip install -r requirements.txt
+```
+
+## Using conda
+```
+conda env create -n twilio-env -f environment.yml
+```
 
 # Setup Twilio trial account
 https://www.twilio.com/try-twilio
@@ -32,7 +31,13 @@ All products and services > ENGAGEMENT CLOUD > Notify > Services > +
 * Save
 
 # Run tw-create-bindings.py
+```
+python tw-create-bindings.py -f my-list-of-numbers.csv
+```
 
 # Text all bindings:
+```
 notification = client.notify.services("IS###################################")\
     .notifications.create(tag=["all"],body="Please take our survey")
+```
+
